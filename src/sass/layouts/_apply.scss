@@ -129,14 +129,17 @@
 
             .input-group {
                 &.success input {
-                    outline: 2px solid green;
+                    outline: 2px solid $success;
+                    border-radius: 8px;
+
                 }
 
                 &.error input {
-                    outline: 2px solid red;
+                    outline: 2px solid $danger;
+                    border-radius: 8px;
                 }
                 .error{
-                    color: red;
+                    color: $danger;
                     margin-top: 5px;
                 }
             }
