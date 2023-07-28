@@ -52,7 +52,7 @@
                 @include shape-right;
                 height: 44px;
                 width: 130px;
-                background-color:$orange-red;
+                background-color: $orange-red;
                 left: 630px;
                 bottom: 270px;
             }
@@ -127,6 +127,20 @@
                 outline: none;
             }
 
+            .input-group {
+                &.success input {
+                    outline: 2px solid green;
+                }
+
+                &.error input {
+                    outline: 2px solid red;
+                }
+                .error{
+                    color: red;
+                    margin-top: 5px;
+                }
+            }
+
             .row {
                 @include flexBox(space-evenly);
                 margin-bottom: 50px;
@@ -164,7 +178,7 @@
                         border: solid 1px #d5d5d5;
                         line-height: 1.94;
                         color: $grey-color;
-                        margin-bottom: 20px;
+                        margin-bottom:5px;
                     }
 
                     .select-input {
@@ -179,6 +193,7 @@
                         font-style: normal;
                         line-height: 1.75;
                         color: $dark-blue;
+                        outline: none;
 
                         &::placeholder {
                             color: $dark-blue;
@@ -197,155 +212,188 @@
             }
         }
     }
-    @include breakpoints(map-get($breakpoints, "viewport-xl")){
-        &{
-          .container{
-            .creative-shapes{
-                position: absolute;
-                top: 650px;
-                z-index: 1;
-            }
-            .message{
-                margin:10px 0 30px;
-                width: 90%;
-                margin-left: 70px;
-            }
-            .btn-container {
-                width: 100%;
-            }
-            form{
-                .upload{
+
+    @include breakpoints(map-get($breakpoints, "viewport-xl")) {
+        & {
+            .container {
+                .creative-shapes {
+                    position: absolute;
+                    top: 650px;
+                    z-index: 1;
+                }
+
+                .message {
+                    margin: 10px 0 30px;
+                    width: 90%;
                     margin-left: 70px;
-                    .input-container{
-                        .drag-input{
+                }
+
+                .btn-container {
+                    width: 100%;
+                }
+
+                form {
+                    .upload {
+                        margin-left: 70px;
+
+                        .input-container {
+                            .drag-input {
+                                width: 92%;
+                            }
+
+                            .select-input {
+                                left: 50%;
+                            }
+                        }
+
+                        .comment-input {
                             width: 92%;
                         }
-                        .select-input{
-                            left: 50%;
-                        }
-                    }
-                    .comment-input{
-                        width: 92%;
                     }
                 }
             }
-          }
         }
     }
-    @include breakpoints(map-get($breakpoints, "viewport-lg")){
-        &{
-          .container{
-            .creative-shapes{
-                position: absolute;
-                top: 650px;
-                z-index: 1;
-            }
-            .message{
-                margin:10px 0 30px;
-                width: 100%;
-            }
-            .btn-container {
-                width: 100%;
-            }
-            form{
-                .upload{
-                    margin-left: 0;
-                    .input-container{
-                        .drag-input{
+
+    @include breakpoints(map-get($breakpoints, "viewport-lg")) {
+        & {
+            .container {
+                .creative-shapes {
+                    position: absolute;
+                    top: 650px;
+                    z-index: 1;
+                }
+
+                .message {
+                    margin: 10px 0 30px;
+                    width: 100%;
+                }
+
+                .btn-container {
+                    width: 100%;
+                }
+
+                form {
+                    .upload {
+                        margin-left: 0;
+
+                        .input-container {
+                            .drag-input {
+                                width: 100%;
+                            }
+
+                            .select-input {
+                                left: 50%;
+                            }
+                        }
+
+                        .comment-input {
                             width: 100%;
                         }
-                        .select-input{
-                            left: 50%;
-                        }
-                    }
-                    .comment-input{
-                        width: 100%;
                     }
                 }
             }
-          }
         }
     }
-    @include breakpoints(map-get($breakpoints, "viewport-md")){
-        &{
+
+    @include breakpoints(map-get($breakpoints, "viewport-md")) {
+        & {
             margin-bottom: 70px;
-            .container{
-                .half-round{
+
+            .container {
+                .half-round {
                     display: none;
                 }
-                .round{
-                    left:10px;
+
+                .round {
+                    left: 10px;
                     top: 50px;
                 }
-                .round-1{
+
+                .round-1 {
                     right: 10px;
                     top: 300px;
                 }
-                .round-3{
+
+                .round-3 {
                     right: 10px;
                 }
-                .round-4{
+
+                .round-4 {
                     @include round($orange-red);
-                    top:550px;
-                    left:10px;
+                    top: 550px;
+                    left: 10px;
                 }
+
                 .btn-container {
                     justify-content: center;
                     width: 100%;
                     margin-top: 30px;
                 }
-                .message{
+
+                .message {
                     margin-left: 0;
                     width: 80%;
-                    margin:auto;
+                    margin: auto;
                     text-align: center;
                 }
-                .creative-shapes{
+
+                .creative-shapes {
                     display: none;
                 }
-                .title{
+
+                .title {
                     font-size: 45px;
                 }
-                .content{
+
+                .content {
                     width: 80%;
                     margin: auto;
                     margin-bottom: 10px;
                 }
-                form{
-                    .row{
+
+                form {
+                    .row {
                         flex-direction: column;
                         margin-bottom: 0px;
+
                         input {
                             width: 300px;
                             height: 41px;
                             margin-bottom: 10px;
                         }
                     }
-                    label{
+
+                    label {
                         font-size: 18px;
                         margin-bottom: 10px;
-                      
+
                     }
-                    .upload{
-                        label{
+
+                    .upload {
+                        label {
                             text-align: start;
                             margin-left: 10%;
                             margin-bottom: 5px;
                         }
+
                         margin-left: 0px;
                         text-align: center;
-                        .input-container{
-                            .drag-input{
+
+                        .input-container {
+                            .drag-input {
                                 width: 80%;
                                 padding: 0px;
                             }
-                            .select-input{
-                                top:70%;
-                                left:50%;
+
+                            .select-input {
+                                top: 70%;
+                                left: 50%;
                                 width: 60%;
                             }
                         }
-                        .comment-input{
+
+                        .comment-input {
                             width: 80%;
                             margin-bottom: 20px;
                         }
@@ -354,87 +402,105 @@
             }
         }
     }
-    @include breakpoints(map-get($breakpoints, "viewport-sm")){
-        &{
+
+    @include breakpoints(map-get($breakpoints, "viewport-sm")) {
+        & {
             margin-bottom: 70px;
-            .container{
-                .half-round{
+
+            .container {
+                .half-round {
                     display: none;
                 }
-                .round{
-                    left:10px;
+
+                .round {
+                    left: 10px;
                     top: 50px;
                 }
-                .round-1{
+
+                .round-1 {
                     right: 10px;
                     top: 300px;
                 }
-                .round-3{
+
+                .round-3 {
                     right: 10px;
                 }
-                .round-4{
+
+                .round-4 {
                     @include round($orange-red);
-                    top:550px;
-                    left:10px;
+                    top: 550px;
+                    left: 10px;
                 }
-                .message{
+
+                .message {
                     margin-left: 0;
                     width: 80%;
-                    margin:auto;
+                    margin: auto;
                     text-align: center;
                     margin-bottom: 30px;
                 }
-                .creative-shapes{
+
+                .creative-shapes {
                     display: none;
                 }
-                .title{
+
+                .title {
                     font-size: 40px;
                 }
-                .content{
+
+                .content {
                     width: 80%;
                     margin: auto;
                     margin-bottom: 10px;
                 }
-                
-        .btn-container {
-            justify-content: center;
-            width: 100%;
-        }
-                form{
-                    .row{
+
+                .btn-container {
+                    justify-content: center;
+                    width: 100%;
+                }
+
+                form {
+                    .row {
                         flex-direction: column;
                         margin-bottom: 0px;
+
                         input {
                             width: 240px;
                             height: 41px;
                             margin-bottom: 10px;
                         }
                     }
-                    label{
+
+                    label {
                         font-size: 18px;
                         margin-bottom: 10px;
-                      
+
                     }
-                    .upload{
-                        label{
+
+                    .upload {
+                        label {
                             text-align: start;
                             margin-left: 10%;
                             margin-bottom: 5px;
                         }
+
                         margin-left: 0px;
                         text-align: center;
-                        .input-container{
-                            .drag-input{
+
+                        .input-container {
+                            .drag-input {
                                 width: 80%;
                                 padding: 0px;
                             }
-                            .select-input{
-                                top:70%;
-                                left:50%;
+
+                            .select-input {
+                                top: 70%;
+                                left: 50%;
                                 width: 60%;
                             }
                         }
-                        .comment-input{
+
+                        .comment-input {
                             width: 80%;
                             margin-bottom: 20px;
                         }
