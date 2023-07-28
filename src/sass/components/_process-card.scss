@@ -1,0 +1,119 @@
+.process-section{
+    .container{
+        .card-row-1 {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 100px;
+        }
+        .card-row-2 {
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            margin-bottom: 120px;
+        }
+    .card {
+        width: 226px;
+        padding: 28px 24px 30px 31px;
+        border-radius: 10px;
+        box-shadow: 0 4px 21px -5px rgba(97, 97, 97, 0.23);
+        &:not(:last-child){
+            margin-right: 100px;
+        }
+        &-count {
+            opacity: 0.68;
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 1;
+            color: $dark-blue;
+            margin-bottom: 10px;
+        }
+
+        &-content {
+            width: 171px;
+            font-size: 15px;
+            line-height: 1.71;
+            letter-spacing: normal;
+            color:$dark-grey-color;
+
+        }
+    }
+    }
+    @include breakpoints(map-get($breakpoints, "viewport-lg")){
+        &{
+            .container{
+                .card-row-1{
+                    justify-content: space-around;
+                    margin-bottom: 10px;
+                    width: 100%;
+
+                    
+                }
+                .card-row-2{
+                    justify-content: space-around;
+                    margin-bottom: 30px;
+                    
+                }
+                .card{
+                    margin-top: 10px;
+                    &:not(:last-child){
+                        margin-right:0;
+                    }
+                    &:last-child{
+                      
+                    }
+                }
+            }
+        }
+    }
+    @include breakpoints(map-get($breakpoints, "viewport-md")){
+        &{
+            .container{
+                .card-row-1{
+                    justify-content: space-around;
+                    margin-bottom: 10px;
+                    width: 100%;
+
+                    
+                }
+                .card-row-2{
+                    justify-content: space-around;
+                    margin-bottom: 30px;
+                    
+                }
+                .card{
+                    margin-top: 10px;
+                    &:not(:last-child){
+                        margin-right:0;
+                    }
+                    &:last-child{
+                      
+                    }
+                }
+            }
+        }
+    }
+    @include breakpoints(map-get($breakpoints, "viewport-sm")){
+        &{
+            .container{
+                .card-row-1{
+                    justify-content: center;
+                    margin-bottom: 10px;
+                    
+                }
+                .card-row-2{
+                    justify-content: center;
+                    margin-bottom: 30px;
+                    
+                }
+                .card{
+                    &:not(:first-child){
+                        margin-top:10px;
+                    }
+                    &:not(:last-child){
+                        margin-right:0;
+                    }
+                }
+            }
+        }
+    }
+}

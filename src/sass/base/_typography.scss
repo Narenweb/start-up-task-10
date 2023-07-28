@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+$utilities:(
+    "font-size":(
+        "prefix":"font",
+        "values":(
+            "xs":14px,
+            "sm":18px,
+            "md":20px,
+            "lg":48px,
+            "xl":82px
+        )
+    )
+);
+
+@each $prop,$map in $utilities{
+    $prefix:map-get($map,"prefix");
+    $values:map-get($map,"values");
+    @each $key,$val in $values{
+        .#{$prefix}-#{$key}{
+            #{$prop}:$val;
+        }
+    }
+}

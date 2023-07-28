@@ -1,0 +1,242 @@
+.company-section{
+    .card-calendar{
+        @include flexBox(space-between);
+        margin-bottom: 54px;
+        flex-wrap: wrap;
+        .card{
+            width: 330px;
+            padding: 60px 2px 38px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.19);
+            background-color: $orange-red;
+
+            &-number{
+                margin-bottom: 30px;
+                font-size: 64px;
+                font-weight: 900;
+                line-height: 0.5;
+                color:$light-color;
+            }
+            &-content{
+                opacity: 0.8;
+                font-size: 24px;
+                line-height: 1.46;
+                color: $light-color;
+            }
+        }
+    }
+
+    .company-row-1 {
+       @include flexBox(space-evenly);
+        align-items: center;
+        flex-wrap: wrap;
+
+        img {
+            &:nth-child(2) {
+                width: 325px;
+                height: 42px;
+                object-fit: contain;
+            }
+
+            &:nth-child(3) {
+                width: 120px;
+                height: 37px;
+                object-fit: contain;
+            }
+
+            &:nth-child(4) {
+                width: 64px;
+                height: 81.5px;
+                object-fit: contain;
+            }
+        }
+    }
+    .company-row-2{
+        @include flexBox(space-evenly);
+        flex-wrap: wrap;
+        img{
+            &:first-child{
+                width: 323px;
+                height: 38px;
+                margin: 25px 92px 0 45px;
+                object-fit: contain;
+            }
+            &:last-child{
+                width: 170px;
+                height: 21px;
+                margin: 35px 129px 7px 27px;
+                object-fit: contain;
+              
+            }
+        }
+    }
+    @include breakpoints(map-get($breakpoints, "viewport-xl")){
+        &{
+            .card-calendar{
+                @include flexBox(space-around);
+                .card{
+                    margin-top: 10px;
+                }
+                  }
+        }
+    }
+    @include breakpoints(map-get($breakpoints,"viewport-lg")){
+        &{
+            .card-calendar{
+                margin-bottom: 34px;
+              .card{
+           
+                margin: auto;
+                
+                margin-bottom: 20px;
+                &-number{
+                    font-size: 54px;
+                }
+                &-content{
+                    font-size: 25px;
+                }
+              }
+            }
+            .company-row-1 {
+        
+                 img {
+                    &:first-child{
+                        width: 18%;
+                    }
+                     &:nth-child(2) {
+                         width: 25%;
+                     }
+         
+                     &:nth-child(3) {
+                         width: 30%;
+                     }
+         
+                     &:nth-child(4) {
+                         width: 20%;
+                     }
+                 }
+             }
+             .company-row-2{
+                img{
+                    &:first-child{
+                        width: 40%;
+                        margin:25px 0 0;
+                    }
+                    &:last-child{
+                        width: 20%;
+                        height: 21px;
+                        margin:25px 0 0;
+                      
+                    }
+                }
+            }
+        }
+     
+     }
+    @include breakpoints(map-get($breakpoints,"viewport-md")){
+        &{
+            .card-calendar{
+                margin-bottom: 34px;
+              .card{
+                width: 65%;
+                margin: auto;
+                
+                margin-bottom: 20px;
+                &-number{
+                    font-size: 54px;
+                }
+                &-content{
+                    font-size: 25px;
+                }
+              }
+            }
+            .company-row-1 {
+        
+                 img {
+                    &:first-child{
+                        width: 30%;
+                    }
+                     &:nth-child(2) {
+                         width: 40%;
+                     }
+         
+                     &:nth-child(3) {
+                         width: 40%;
+                     }
+         
+                     &:nth-child(4) {
+                         width: 30%;
+                     }
+                 }
+             }
+             .company-row-2{
+                img{
+                    &:first-child{
+                        width: 40%;
+                        margin:25px 0 0;
+                    }
+                    &:last-child{
+                        width: 20%;
+                        height: 21px;
+                        margin:25px 0 0;
+                      
+                    }
+                }
+            }
+        }
+     
+     }
+    @include breakpoints(map-get($breakpoints,"viewport-sm")){
+        &{
+            .card-calendar{
+                margin-bottom: 34px;
+              .card{
+                width: 85%;
+                margin: auto;
+                
+                margin-bottom: 20px;
+                &-number{
+                    font-size: 44px;
+                }
+                &-content{
+                    font-size: 18px;
+                }
+              }
+            }
+            .company-row-1 {
+        
+                 img {
+                    &:first-child{
+                        width: 30%;
+                    }
+                     &:nth-child(2) {
+                         width: 40%;
+                     }
+         
+                     &:nth-child(3) {
+                         width: 40%;
+                     }
+         
+                     &:nth-child(4) {
+                         width: 30%;
+                     }
+                 }
+             }
+             .company-row-2{
+                img{
+                    &:first-child{
+                        width: 60%;
+                        margin:25px 0 0;
+                    }
+                    &:last-child{
+                        width: 30%;
+                        height: 21px;
+                        margin:25px 0 0;
+                      
+                    }
+                }
+            }
+        }
+     
+     }
+}

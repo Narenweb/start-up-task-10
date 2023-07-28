@@ -1,0 +1,108 @@
+.discussion-session{
+    width: 100%;
+    position: relative;
+    margin-bottom: 197px;
+    .round{
+        @include round($orange-red);
+        position: absolute;
+        right: 127px;
+        top: 185px;
+    }
+    .half-round{
+        @include halfRound(scale(-1),$dark-blue);
+        top: 140px;
+        left: -90px;
+    }
+          
+    &-content{
+        line-height: 1.75;
+        color:$grey-color ;
+        margin-bottom: 34px;
+    }
+    @include breakpoints(map-get($breakpoints,"viewport-xl")){
+        &{
+            margin-bottom: 97px;
+           &-img{
+            margin-bottom: 20px;
+           }
+           .half-round{
+            display: none;
+           }
+           .round{
+            position: absolute;
+            right: 27px;
+            top: 15px;
+           }
+           &-content{
+            line-height: 1.21;
+            font-size: 18px;
+           }
+        }
+     
+     }
+    @include breakpoints(map-get($breakpoints,"viewport-lg")){
+        &{
+            margin-bottom: 97px;
+           &-img{
+            margin-bottom: 20px;
+           }
+           .half-round{
+            display: none;
+           }
+           .round{
+            position: absolute;
+            right: 27px;
+            top: 15px;
+           }
+           &-content{
+            line-height: 1.21;
+            font-size: 18px;
+           }
+        }
+     
+     }
+    @include breakpoints(map-get($breakpoints,"viewport-md")){
+        &{
+            margin-bottom: 97px;
+           &-img{
+            width: 90%;
+            margin-bottom: 10px;
+           }
+           .half-round{
+            display: none;
+           }
+           .round{
+            position: absolute;
+            right: 27px;
+            top: 15px;
+           }
+           &-content{
+            line-height: 1.21;
+            font-size: 18px;
+           }
+        }
+     
+     }
+    @include breakpoints(map-get($breakpoints,"viewport-sm")){
+        &{
+            margin-bottom: 97px;
+           &-img{
+            width: 90%;
+            margin-bottom: 10px;
+           }
+           .half-round{
+            display: none;
+           }
+           .round{
+            position: absolute;
+            right: 27px;
+            top: 15px;
+           }
+           &-content{
+            line-height: 1.21;
+            font-size: 14px;
+           }
+        }
+     
+     }
+}

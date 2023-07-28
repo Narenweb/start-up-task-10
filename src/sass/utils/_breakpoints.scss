@@ -1,0 +1,12 @@
+@mixin breakpoints($bp){
+    @media (max-width:$bp){
+        @content;
+    }
+}
+
+$breakpoints:(
+    "viewport-sm":480px,
+    "viewport-md":769px,
+    "viewport-lg":930px,
+    "viewport-xl":1070px,
+)

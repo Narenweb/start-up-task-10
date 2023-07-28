@@ -1,0 +1,46 @@
+@mixin btn($bg-color) {
+    color: $light-color;
+    background-color: $bg-color;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+@mixin shape {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transform: rotate(-45deg);
+    position: absolute;
+}
+@mixin shape-right{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transform: rotate(-40deg);
+    position: relative;
+}
+
+@mixin round($bg-color) {
+    width: 25px;
+    height: 25px;
+    background-color: $bg-color;
+    border-radius: 50%;
+}
+
+@mixin halfRound($scale,$bg-color){
+    width: 70px;
+    height: 140px; 
+    background-color: $bg-color; 
+    overflow: hidden; 
+    transform: $scale;
+    border-top-left-radius: 200px; 
+    border-bottom-left-radius: 200px; 
+    position: relative; 
+}
+
+@mixin flexBox($content){
+    display: flex;
+    justify-content: $content;
+    align-items: center;
+}

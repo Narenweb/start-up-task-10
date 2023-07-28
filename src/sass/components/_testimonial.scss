@@ -1,0 +1,189 @@
+.video-card {
+    .container {
+        .card-container {
+            @include flexBox(space-between);
+            flex-wrap: wrap;
+
+            .card {
+                width: 330px;
+                padding: 1px 0 23px;
+                border: solid 1px #dfdfdf;
+                border-radius: 10px;
+                margin-bottom: 44px;
+
+                img {
+                    width: 100%;
+                    height: 194px;
+                    opacity: 0.82;
+                }
+
+                .card-content {
+                    padding: 10px 20px;
+
+                    .card-text {
+                        margin-bottom: 20px;
+                        font-size: 16px;
+                    }
+
+                    .video-by-container {
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            width: 40px;
+                            height: 40px;
+                        }
+
+                        .owner-name {
+                            margin: 0 17px 3px;
+                            font-size: 14px;
+                            color: $dark-grey-color;
+                        }
+
+                        .clock-img {
+                            width: 15px;
+                            height: 15px;
+                        }
+
+                        .time {
+                            margin: 4px 13px 5px 4px;
+                            color: $dark-grey-color;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    @include breakpoints(map-get($breakpoints, "viewport-xl")) {
+        & {
+            .container {
+                .card-container {
+                    @include flexBox(space-evenly);
+                }
+            }
+        }
+    }
+
+    @include breakpoints(map-get($breakpoints, "viewport-lg")) {
+        & {
+            .container {
+                .card-container {
+                    @include flexBox(space-evenly);
+                }
+            }
+        }
+    }
+
+    @include breakpoints(map-get($breakpoints, "viewport-md")) {
+        & {
+            .container {
+                .secondary-btn {
+                    width: 60%;
+                    font-size: 12px;
+                }
+
+                .card-container {
+                    .card {
+                        margin: auto;
+                        margin-bottom: 20px;
+
+                        img {
+                            width: 100%;
+                        }
+
+                        .card-content {
+                            padding: 10px 20px;
+
+
+                            .video-by-container {
+                                display: flex;
+                                align-items: center;
+
+                                img {
+                                    width: 30px;
+                                    height: 30px;
+                                }
+
+                                .owner-name {
+                                    font-size: 10px;
+                                    color: $dark-grey-color;
+                                }
+
+                                .clock-img {
+                                    width: 15px;
+                                    height: 15px;
+                                }
+
+                                .time {
+                                    font-size: 10px;
+                                    color: $dark-grey-color;
+                                }
+                            }
+                        }
+
+
+                    }
+
+                }
+            }
+        }
+    }
+
+    @include breakpoints(map-get($breakpoints, "viewport-sm")) {
+        & {
+            .container {
+                .secondary-btn {
+                    width: 60%;
+                    font-size: 12px;
+                }
+
+                .card-container {
+                    .card {
+                        width: 80%;
+                        margin: auto;
+                        margin-bottom: 20px;
+
+                        img {
+                            width: 100%;
+                        }
+
+                        .card-content {
+                            padding: 10px 20px;
+
+
+                            .video-by-container {
+                                display: flex;
+                                align-items: center;
+
+                                img {
+                                    width: 30px;
+                                    height: 30px;
+                                }
+
+                                .owner-name {
+                                    font-size: 10px;
+                                    color: $dark-grey-color;
+                                }
+
+                                .clock-img {
+                                    width: 15px;
+                                    height: 15px;
+                                }
+
+                                .time {
+                                    // margin: 4px 13px 5px 4px;
+                                    font-size: 10px;
+                                    color: $dark-grey-color;
+                                }
+                            }
+                        }
+
+
+                    }
+
+                }
+            }
+        }
+    }
+}

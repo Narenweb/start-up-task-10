@@ -1,0 +1,446 @@
+.apply {
+    position: relative;
+    width: 100%;
+    margin-bottom: 150px;
+    overflow: hidden;
+
+    .container {
+        position: relative;
+
+        .half-round {
+            @include halfRound(scale(1), $dark-blue);
+            top: 0px;
+            right: -60px;
+            position: absolute;
+        }
+
+        .round {
+            @include round($dark-blue);
+            position: absolute;
+            left: 150px;
+            top: 10px;
+        }
+
+        .round-1 {
+            @include round($dark-color);
+            position: absolute;
+            right: 120px;
+            top: 115px;
+        }
+
+        .round-3 {
+            @include round($dark-blue);
+            position: absolute;
+            right: 30px;
+            bottom: 250px;
+        }
+
+        .round-4 {
+            @include round($dark-color);
+            position: absolute;
+            left: 30px;
+            bottom: 150px;
+        }
+
+        .creative-shapes {
+            position: absolute;
+            right: 550px;
+            top: 700px;
+            width: 100px;
+
+            .bar-1 {
+                @include shape-right;
+                height: 44px;
+                width: 130px;
+                background-color:$orange-red;
+                left: 630px;
+                bottom: 270px;
+            }
+
+            .round-1 {
+                border-radius: 50%;
+                background-color: $dark-color;
+                height: 25px;
+                width: 25px;
+                position: relative;
+                left: 600px;
+                top: -240px;
+            }
+
+            .bar-2 {
+                @include shape-right;
+                height: 44px;
+                width: 230px;
+                background-color: $orange-red;
+                left: 550px;
+                bottom: 225px;
+            }
+
+            .bar-3 {
+                @include shape-right;
+                height: 47px;
+                width: 100px;
+                background-color: $dark-blue;
+                left: 650px;
+                bottom: 210px;
+            }
+
+            .round-2 {
+                border-radius: 50%;
+                background-color: $dark-blue;
+                height: 40px;
+                width: 40px;
+                position: relative;
+                left: 600px;
+                bottom: 190px;
+            }
+        }
+
+
+        .title {
+            margin-bottom: 37px;
+            line-height: 0.67;
+        }
+
+        .content {
+            line-height: 1.75;
+            color: $grey-color;
+            margin-bottom: 100px;
+        }
+
+        .message {
+            line-height: 1.43;
+            color: $dark-grey-color;
+            margin-left: 100px;
+            width: 890px;
+            margin-bottom: 80px;
+        }
+
+        .btn-container {
+            width: 980px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        form {
+            input {
+                outline: none;
+            }
+
+            .row {
+                @include flexBox(space-evenly);
+                margin-bottom: 50px;
+
+                input {
+                    width: 361px;
+                    height: 41px;
+                    border-radius: 8px;
+                    border: solid 1px #d5d5d5;
+                    padding-left: 20px;
+                }
+
+            }
+
+            label {
+                display: block;
+                margin-bottom: 18px;
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 1.46;
+            }
+
+            .upload {
+                margin-left: 110px;
+
+                .input-container {
+                    position: relative;
+
+                    .drag-input {
+                        width: 850px;
+                        height: 181px;
+                        margin: 12px 0 0 2px;
+                        padding: 37px 198px 64px 193px;
+                        border-radius: 8px;
+                        border: solid 1px #d5d5d5;
+                        line-height: 1.94;
+                        color: $grey-color;
+                        margin-bottom: 20px;
+                    }
+
+                    .select-input {
+                        position: absolute;
+                        border: none;
+                        left: 45%;
+                        top: 60%;
+                        transform: translate(-50%, -60%);
+                        border-bottom: solid 1px $dark-blue;
+                        font-weight: bold;
+                        ;
+                        font-style: normal;
+                        line-height: 1.75;
+                        color: $dark-blue;
+
+                        &::placeholder {
+                            color: $dark-blue;
+                        }
+                    }
+
+                }
+
+                .comment-input {
+                    width: 850px;
+                    border-radius: 8px;
+                    border: solid 1px #d5d5d5;
+                    padding: 20px 0 100px 20px;
+                    margin-bottom: 46px;
+                }
+            }
+        }
+    }
+    @include breakpoints(map-get($breakpoints, "viewport-xl")){
+        &{
+          .container{
+            .creative-shapes{
+                position: absolute;
+                top: 650px;
+                z-index: 1;
+            }
+            .message{
+                margin:10px 0 30px;
+                width: 90%;
+                margin-left: 70px;
+            }
+            .btn-container {
+                width: 100%;
+            }
+            form{
+                .upload{
+                    margin-left: 70px;
+                    .input-container{
+                        .drag-input{
+                            width: 92%;
+                        }
+                        .select-input{
+                            left: 50%;
+                        }
+                    }
+                    .comment-input{
+                        width: 92%;
+                    }
+                }
+            }
+          }
+        }
+    }
+    @include breakpoints(map-get($breakpoints, "viewport-lg")){
+        &{
+          .container{
+            .creative-shapes{
+                position: absolute;
+                top: 650px;
+                z-index: 1;
+            }
+            .message{
+                margin:10px 0 30px;
+                width: 100%;
+            }
+            .btn-container {
+                width: 100%;
+            }
+            form{
+                .upload{
+                    margin-left: 0;
+                    .input-container{
+                        .drag-input{
+                            width: 100%;
+                        }
+                        .select-input{
+                            left: 50%;
+                        }
+                    }
+                    .comment-input{
+                        width: 100%;
+                    }
+                }
+            }
+          }
+        }
+    }
+    @include breakpoints(map-get($breakpoints, "viewport-md")){
+        &{
+            margin-bottom: 70px;
+            .container{
+                .half-round{
+                    display: none;
+                }
+                .round{
+                    left:10px;
+                    top: 50px;
+                }
+                .round-1{
+                    right: 10px;
+                    top: 300px;
+                }
+                .round-3{
+                    right: 10px;
+                }
+                .round-4{
+                    @include round($orange-red);
+                    top:550px;
+                    left:10px;
+                }
+                .btn-container {
+                    justify-content: center;
+                    width: 100%;
+                    margin-top: 30px;
+                }
+                .message{
+                    margin-left: 0;
+                    width: 80%;
+                    margin:auto;
+                    text-align: center;
+                }
+                .creative-shapes{
+                    display: none;
+                }
+                .title{
+                    font-size: 45px;
+                }
+                .content{
+                    width: 80%;
+                    margin: auto;
+                    margin-bottom: 10px;
+                }
+                form{
+                    .row{
+                        flex-direction: column;
+                        margin-bottom: 0px;
+                        input {
+                            width: 300px;
+                            height: 41px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    label{
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                      
+                    }
+                    .upload{
+                        label{
+                            text-align: start;
+                            margin-left: 10%;
+                            margin-bottom: 5px;
+                        }
+                        margin-left: 0px;
+                        text-align: center;
+                        .input-container{
+                            .drag-input{
+                                width: 80%;
+                                padding: 0px;
+                            }
+                            .select-input{
+                                top:70%;
+                                left:50%;
+                                width: 60%;
+                            }
+                        }
+                        .comment-input{
+                            width: 80%;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include breakpoints(map-get($breakpoints, "viewport-sm")){
+        &{
+            margin-bottom: 70px;
+            .container{
+                .half-round{
+                    display: none;
+                }
+                .round{
+                    left:10px;
+                    top: 50px;
+                }
+                .round-1{
+                    right: 10px;
+                    top: 300px;
+                }
+                .round-3{
+                    right: 10px;
+                }
+                .round-4{
+                    @include round($orange-red);
+                    top:550px;
+                    left:10px;
+                }
+                .message{
+                    margin-left: 0;
+                    width: 80%;
+                    margin:auto;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+                .creative-shapes{
+                    display: none;
+                }
+                .title{
+                    font-size: 40px;
+                }
+                .content{
+                    width: 80%;
+                    margin: auto;
+                    margin-bottom: 10px;
+                }
+                
+        .btn-container {
+            justify-content: center;
+            width: 100%;
+        }
+                form{
+                    .row{
+                        flex-direction: column;
+                        margin-bottom: 0px;
+                        input {
+                            width: 240px;
+                            height: 41px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    label{
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                      
+                    }
+                    .upload{
+                        label{
+                            text-align: start;
+                            margin-left: 10%;
+                            margin-bottom: 5px;
+                        }
+                        margin-left: 0px;
+                        text-align: center;
+                        .input-container{
+                            .drag-input{
+                                width: 80%;
+                                padding: 0px;
+                            }
+                            .select-input{
+                                top:70%;
+                                left:50%;
+                                width: 60%;
+                            }
+                        }
+                        .comment-input{
+                            width: 80%;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

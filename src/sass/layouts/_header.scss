@@ -1,0 +1,185 @@
+.navbar-container {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    position: fixed;
+
+
+    .container {
+        width: 100%;
+        .navbar {
+            margin-left: 150px;
+            @include flexBox(space-between);
+            padding: 20px 20px;
+
+            li {
+                a {
+                    color: $dark-color;
+
+                    &:after {
+                        content: '';
+                        width: 0%;
+                        height: 3px;
+                        background-color: $purple-color;
+                        display: block;
+                        transition: 0.4s ease-out;
+                        margin: 0 auto;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .startup-logo {
+                color: $orange-red;
+            }
+
+            .hamburger {
+                width: 30px;
+                height: 30px;
+                display: none;
+               
+
+                .bar,
+                &::before,
+                &::after {
+                    content: '';
+                    width: 100%;
+                    display: block;
+                    height: 4px;
+                    margin-top: 5px;
+                    background-color: $dark-blue;
+                    transition: 0.4s ease;
+                }
+
+                &.active {
+                    &::before {
+                        transform: translate(0, 9px) rotate(-45deg);
+                    }
+
+                    &::after {
+                        transform: translate(0, -9px) rotate(45deg);
+                    }
+
+                    .bar {
+                        opacity: 0;
+                    }
+                }
+            }
+           
+        }
+       
+    }
+    &.navbar-fixed {
+        background-color: $light-green;
+        transition: 0.4s ease;
+    }
+    @include breakpoints(map-get($breakpoints, "viewport-xl")){
+        &{
+            .container{
+                .navbar{
+                    margin-left: 80px;
+                }
+            }
+        }
+    }
+    
+    @include breakpoints(map-get($breakpoints, "viewport-lg")){
+        &{
+            .container{
+                .navbar{
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+    
+    @include breakpoints(map-get($breakpoints, "viewport-md")) {
+        & {
+            background-color: #CEE6F3;
+            .container {
+                .navbar {
+                    padding: 30px 30px;
+                    width: 100%;
+                    li,.primary-btn {
+                        display: none;  
+                    }
+                    &.nav-active{
+                        @include flexBox(space-evenly);
+                        margin-top: 30px;
+                        margin-left: 10px;
+                        height: 100vh;
+                        flex-direction: column;
+                        li,.primary-btn {
+                            display: block;
+                        }
+                    }
+                    .startup-logo {
+                        display: block;
+                        text-align: center;
+                        position: absolute;
+                        left: 30px;
+                        top:15px;
+                        font-size: 25px;
+                    }
+
+                    .hamburger {
+                    display: block;
+                    position: absolute;
+                    right: 20px;
+                    top:15px;
+                    }
+
+                }
+
+            }
+
+        }
+    }
+
+    @include breakpoints(map-get($breakpoints, "viewport-sm")) {
+        & {
+            background-color: #CEE6F3;
+            .container {
+                .navbar {
+                    padding: 30px 30px;
+                    width: 100%;
+                    li,.primary-btn {
+                        display: none;  
+                    }
+                    &.nav-active{
+                        @include flexBox(space-evenly);
+                        margin-top: 30px;
+                        margin-left: 10px;
+                        height: 100vh;
+                        flex-direction: column;
+                        li,.primary-btn {
+                            display: block;
+                        }
+                    }
+                    .startup-logo {
+                        display: block;
+                        text-align: center;
+                        position: absolute;
+                        left: 30px;
+                        top:15px;
+                        font-size: 25px;
+                    }
+
+                    .hamburger {
+                    display: block;
+                    position: absolute;
+                    right: 20px;
+                    top:15px;
+                    }
+
+                }
+
+            }
+
+        }
+    }
+
+}

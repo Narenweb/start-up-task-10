@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="65" viewBox="0 0 1440 65">
+    <defs>
+        <path id="a" d="M15 0h104c8.284 0 15 6.716 15 15 0 8.284-6.716 15-15 15H15C6.716 30 0 23.284 0 15 0 6.716 6.716 0 15 0z"/>
+        <filter id="b" width="138.8%" height="273.3%" x="-19.4%" y="-73.3%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="2" result="shadowSpreadOuter1"/>
+            <feOffset dy="4" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.795998087 0 0 0 0 0.251164309 0 0 0 0 0.183060087 0 0 0 0.34154212 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path d="M0 0h1440v65H0z"/>
+        <path d="M1227 0h20v65h-20z"/>
+        <text fill="#000" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="828.415" y="35">Explication </tspan>
+        </text>
+        <text fill="#000" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="942.86" y="34">News </tspan>
+        </text>
+        <text fill="#000" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="1027.217" y="34">Contact</tspan> <tspan x="1072.416" y="54"> </tspan>
+        </text>
+        <text fill="#000" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="479.469" y="34">About us </tspan>
+        </text>
+        <text fill="#000" font-family="Lato-Medium, Lato" font-size="14" font-weight="400">
+            <tspan x="587.155" y="34">Process </tspan>
+        </text>
+        <text fill="#000" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="396.868" y="34">Team </tspan>
+        </text>
+        <path d="M1133 0h20v65h-20z"/>
+        <g transform="translate(1186 16)">
+            <mask id="c" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <g fill-rule="nonzero">
+                <use fill="#000" filter="url(#b)" xlink:href="#a"/>
+                <use fill="#EB5B49" xlink:href="#a"/>
+            </g>
+            <text font-family="Lato-Regular, Lato" font-size="14" mask="url(#c)">
+                <tspan x="49.154" y="14" fill="#FFF">Apply</tspan> <tspan x="84.847" y="14" fill="#000"> </tspan>
+            </text>
+        </g>
+        <g fill="#EB5B49" font-family="SFProDisplay-Regular, SF Pro Display" font-size="20">
+            <text transform="translate(689 19)">
+                <tspan x=".907" y="19">STARTUP</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

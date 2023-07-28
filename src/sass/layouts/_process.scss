@@ -1,0 +1,163 @@
+.process-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    .container {
+        position: relative;
+        .half-round {
+            @include halfRound(scale(-1), $orange-red);
+            top: 160px;
+            left: -80px;
+        }
+
+        .round {
+            @include round($orange-red);
+            position: relative;
+            left: 860px;
+            top: 50px;
+        }
+
+        .round-1 {
+            @include round($dark-blue);
+            position: relative;
+            left: 170px;
+            top: 165px;
+        }
+
+        .creative-shapes {
+            position: absolute;
+            right: -20px;
+            top: 400px;
+            width: 100px;
+
+            .bar-1 {
+                @include shape-right;
+                height: 44px;
+                width: 130px;
+                background-color: $orange-red;
+                left: 40px;
+                bottom: 130px;
+                position: inherit;
+            }
+
+            .round-1 {
+                border-radius: 50%;
+                background-color: $dark-color;
+                height: 25px;
+                width: 25px;
+                position: inherit;
+                left: 10px;
+                top: -10px;
+            }
+
+            .bar-2 {
+                @include shape-right;
+                height: 44px;
+                width: 230px;
+                background-color: $orange-red;
+            }
+
+            .bar-3 {
+                @include shape-right;
+                height: 47px;
+                width: 100px;
+                background-color: $dark-blue;
+                left: 80px;
+                bottom: -40px;
+            }
+
+            .round-2 {
+                border-radius: 50%;
+                background-color: $dark-blue;
+                height: 40px;
+                width: 40px;
+                position: inherit;
+                left: 40px;
+                bottom: -89px;
+            }
+        }
+
+        h2 {
+            line-height: 0.67;
+            margin-bottom: 35px;
+        }
+
+    .discription {
+            width: 558px;
+            line-height: 1.75;
+            color: $grey-color;
+            margin: 0 auto;
+            margin-bottom: 100px;
+        }
+
+     
+    }
+
+    @include breakpoints(map-get($breakpoints, "viewport-lg")) {
+        &{
+            .container{
+                h2{
+                    font-size: 45px;
+                }
+                .half-round{
+                    display: none;
+                }
+                .discription{
+                    width: 80%;
+                    margin-bottom: 30px;
+                }
+                .round-1 {
+                    left: 450px;
+                    top: -10px;
+                }
+            }
+        }
+    }
+    @include breakpoints(map-get($breakpoints, "viewport-md")) {
+        &{
+            .container{
+                h2{
+                    font-size: 45px;
+                }
+                .half-round{
+                    display: none;
+                }
+                .discription{
+                    width: 80%;
+                    margin-bottom: 30px;
+                }
+                .round-1 {
+                    left: 450px;
+                    top: -10px;
+                }
+                .creative-shapes{
+                    display: none;
+                }
+            }
+        }
+    }
+    @include breakpoints(map-get($breakpoints, "viewport-sm")) {
+        &{
+            .container{
+                h2{
+                    font-size: 40px;
+                }
+                .half-round{
+                    display: none;
+                }
+                .discription{
+                    width: 90%;
+                    margin-bottom: 30px;
+                }
+                .round-1 {
+                    left: 250px;
+                    top: -15px;
+                }
+                .creative-shapes{
+                    display: none;
+                }
+            }
+        }
+    }
+}

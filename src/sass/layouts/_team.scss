@@ -1,0 +1,145 @@
+.team-section {
+    position: relative;
+    margin-bottom: 70px;
+
+    .round-1 {
+        @include round($dark-blue);
+        position: absolute;
+        left: 110px;
+        top: -55px;
+    }
+
+    .round-2 {
+        @include round($dark-blue);
+        position: absolute;
+        right: 110px;
+    }
+
+    .half-round {
+        @include halfRound(scale(1), $orange-red);
+        position: absolute;
+        right: -56px;
+        top: -140px;
+    }
+
+    &-heading {
+        line-height: 0.67;
+        margin-bottom: 38px;
+    }
+
+    &-content {
+        line-height: 1.75;
+        color: $grey-color;
+        width: 558px;
+        margin: 0 auto;
+        margin-bottom: 110px;
+    }
+    @media (max-width:1200px){
+        &{
+            .half-round {
+                display: none;
+            }
+        }
+    }
+    @include breakpoints(map-get($breakpoints, "viewport-xl")) {
+        & {
+            margin-bottom: 10px;
+            &-heading{
+                font-size: 45px;
+            }
+            .half-round {
+                display: none;
+            }
+            .round-1{
+                left: 10px;
+                top: -255px;
+            }
+            .round-2 {
+                right: 10px;
+            }
+
+            &-content {
+                width: 80%;
+                margin-bottom: 30px;
+            }
+
+        }
+
+    }
+    @include breakpoints(map-get($breakpoints, "viewport-lg")) {
+        & {
+            margin-bottom: 10px;
+            &-heading{
+                font-size: 45px;
+            }
+            .half-round {
+                display: none;
+            }
+            .round-1{
+                left: 10px;
+                top: -255px;
+            }
+            .round-2 {
+                right: 10px;
+            }
+
+            &-content {
+                width: 80%;
+                margin-bottom: 30px;
+            }
+
+        }
+
+    }
+
+    @include breakpoints(map-get($breakpoints, "viewport-md")) {
+        & {
+            margin-bottom: 10px;
+            &-heading{
+                font-size: 45px;
+            }
+            .half-round {
+                display: none;
+            }
+            .round-1{
+                left: 10px;
+                top: -255px;
+            }
+            .round-2 {
+                right: 10px;
+            }
+
+            &-content {
+                width: 80%;
+                margin-bottom: 30px;
+            }
+
+        }
+
+    }
+    @include breakpoints(map-get($breakpoints, "viewport-sm")) {
+        & {
+            margin-bottom: 10px;
+            &-heading{
+                font-size: 40px;
+            }
+            .half-round {
+                display: none;
+            }
+            .round-1{
+                left: 10px;
+                top: -255px;
+            }
+            .round-2 {
+                right: 10px;
+            }
+
+            &-content {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+        }
+
+    }
+}

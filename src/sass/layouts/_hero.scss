@@ -1,0 +1,213 @@
+.hero{
+    text-align: center;
+    width: 100%;
+    min-height:600px;
+    position: relative;
+    overflow: hidden;
+    .container{
+       @include flexBox(center);
+        flex-direction: column;
+        padding-top: 120px;
+    }
+    &-title{
+        width: 553px;
+        font-weight: bold;
+        line-height: 0.98;
+        color: #283583;
+        margin-bottom: 39px;
+    }
+    &-content{
+        width: 553px;
+        font-size: 24px;
+        line-height: 1.46;
+        color: #818182;
+        margin-bottom: 39px;
+    }
+    &-scroll{
+        margin-bottom: 10px;
+    }
+    &-shape{
+        border-right: 5px solid $dark-color;
+        border-bottom: 5px solid $dark-color;
+        width: 20px;
+        height: 20px;
+        transform: rotate(45deg);
+        cursor: pointer;
+        display: inline-block;
+        &:hover{
+            transform: scale(1.1,1.1) rotate(45deg);
+            border-right: 5px solid $dark-blue;
+            border-bottom: 5px solid $dark-blue;
+        }
+    }
+    .creative-shapes{
+        .bar-1{
+            @include shape-right;
+            height: 44px;
+            width: 130px;
+            background-color: $orange-red;
+            left: 630px;
+            bottom: 270px;   
+        }
+        .round-1{
+            border-radius: 50%;
+            background-color: $dark-color;
+            height: 25px;
+            width: 25px;
+            position: relative;
+            left: 600px;
+            bottom:228px;
+        }
+        .bar-2{
+            @include shape-right;
+            height: 44px;
+            width: 230px;
+            background-color:  $orange-red;
+            left: 550px;
+            bottom: 225px;
+        }
+        .bar-3{
+            @include shape-right;
+            height: 47px;
+            width: 100px;
+            background-color:$dark-blue;
+            left: 650px;
+            bottom: 210px;
+        }
+        .round-2{
+            border-radius: 50%;
+            background-color: $dark-blue;
+            height: 40px;
+            width: 40px;
+            position: relative;
+            left: 600px;
+            bottom:190px;
+        }
+    }
+    
+    .creative-shapes-left{
+        position: relative;
+        left: -890px;
+        top: 180px;
+        transform: rotate(-95deg);
+
+        .bar-1{
+            @include shape;
+            height: 47px;
+            width: 100px;
+            background-color:$dark-blue;
+            left: -210px;
+            top: 250px;
+        }
+        .round-1{
+            border-radius: 50%;
+            background-color: $dark-color;
+            height: 25px;
+            width: 25px;
+            position: absolute;
+            right: 70px;
+            top:378px;
+        }
+        .bar-2{
+            @include shape;
+            height: 44px;
+            width: 270px;
+            background-color:  $orange-red;
+            right: 0px;
+            top: 325px;
+        }
+        .bar-3{
+            @include shape;
+            height: 44px;
+            width: 130px;
+            background-color:  $orange-red;
+            right: -60px;
+            top: 290px;
+        }
+        .round-2{
+            border-radius: 50%;
+            background-color: $dark-blue;
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            right: 210px;
+            top:318px;
+        }
+    }
+    @include breakpoints(map-get($breakpoints,"viewport-xl")){
+        &{
+            min-height:550px;
+            .container{
+                padding-top: 150px;
+            }
+            &-content{
+                font-size: 20px;
+                width: 90%;
+            }
+            &-scroll{
+                margin-bottom: 10px;
+            }
+            .creative-shapes{
+             position: absolute;
+             left: 390px;
+             top: 550px;
+            }
+        }
+    }
+    @include breakpoints(map-get($breakpoints,"viewport-lg")){
+        &{
+            min-height:500px;
+            .container{
+                padding-top: 170px;
+            }
+            &-title{
+                font-size: 60px;
+            }
+            &-content{
+                font-size: 20px;
+                width: 90%;
+            }
+            .creative-shapes,.creative-shapes-left{
+                display: none;
+            }
+        }
+    }
+    @include breakpoints(map-get($breakpoints,"viewport-md")){
+        &{
+            min-height:500px;
+            .container{
+                padding-top: 200px;
+            }
+            &-title{
+                font-size: 30px;
+            }
+            &-content{
+                font-size: 20px;
+                width: 90%;
+            }
+            .creative-shapes,.creative-shapes-left{
+                display: none;
+            }
+        }
+    }
+    
+    @include breakpoints(map-get($breakpoints,"viewport-sm")){
+        &{
+            .container{
+                padding-top: 150px;
+            }
+            min-height:500px;
+            &-title{
+                font-size: 25px;
+            }
+            &-content{
+                font-size: 20px;
+                width: 90%;
+            }
+            .creative-shapes,.creative-shapes-left{
+                display: none;
+            }
+        }
+    }
+    
+}

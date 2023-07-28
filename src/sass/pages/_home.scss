@@ -1,0 +1,27 @@
+// Base imports
+@import '../base/reset';
+@import '../base/typography';
+
+//Utils imports
+@import '../utils/helpers';
+@import '../utils/mixins';
+@import '../utils/variables';
+@import '../utils/breakpoints';
+
+//Components imports
+@import '../components/button';
+@import '../components/team-member-card';
+@import '../components/process-card';
+@import '../components/company-card';
+@import '../components/testimonial';
+
+//Layouts imports
+@import '../layouts/header.scss';
+@import '../layouts/hero.scss';
+@import '../layouts/team';
+@import '../layouts/discussion';
+@import '../layouts/process';
+@import '../layouts/company-section';
+@import '../layouts/video-card';
+@import '../layouts/apply';
+@import '../layouts/footer';

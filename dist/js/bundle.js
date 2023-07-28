@@ -1,0 +1,2 @@
+(()=>{"use strict";var e=document.querySelector(".hamburger"),t=document.querySelector(".navbar-container"),a=document.querySelector(".navbar");e.addEventListener("click",(function(){e.classList.toggle("active"),a.classList.toggle("nav-active")})),document.addEventListener("scroll",(function(){window.scrollY>=1?t.classList.add("navbar-fixed"):t.classList.remove("navbar-fixed")}))})();
+//# sourceMappingURL=bundle.js.map
