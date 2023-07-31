@@ -4,98 +4,98 @@
     margin-bottom: 150px;
     overflow: hidden;
 
-    .container {
-        position: relative;
+    .half-round {
+        @include halfRound(scale(1), $dark-blue);
+        top: 0px;
+        right: 0px;
+        position: absolute;
+    }
 
-        .half-round {
-            @include halfRound(scale(1), $dark-blue);
-            top: 0px;
-            right: -60px;
-            position: absolute;
-        }
+    .round {
+        @include round($dark-blue);
+        position: absolute;
+        left: 150px;
+        top: 10px;
+    }
 
-        .round {
-            @include round($dark-blue);
-            position: absolute;
-            left: 150px;
-            top: 10px;
+    .round-1 {
+        @include round($dark-color);
+        position: absolute;
+        right: 120px;
+        top: 115px;
+    }
+
+    .round-3 {
+        @include round($dark-blue);
+        position: absolute;
+        right: 30px;
+        bottom: 250px;
+    }
+
+    .round-4 {
+        @include round($dark-color);
+        position: absolute;
+        left: 30px;
+        bottom: 150px;
+    }
+
+    .creative-shapes {
+        position: absolute;
+        right: 600px;
+        top: 700px;
+        width: 100px;
+
+        .bar-1 {
+            @include shape-right;
+            height: 44px;
+            width: 130px;
+            background-color: $orange-red;
+            left: 630px;
+            bottom: 270px;
         }
 
         .round-1 {
-            @include round($dark-color);
-            position: absolute;
-            right: 120px;
-            top: 115px;
+            border-radius: 50%;
+            background-color: $dark-color;
+            height: 25px;
+            width: 25px;
+            position: relative;
+            left: 600px;
+            top: -240px;
         }
 
-        .round-3 {
-            @include round($dark-blue);
-            position: absolute;
-            right: 30px;
-            bottom: 250px;
+        .bar-2 {
+            @include shape-right;
+            height: 44px;
+            width: 230px;
+            background-color: $orange-red;
+            left: 550px;
+            bottom: 225px;
         }
 
-        .round-4 {
-            @include round($dark-color);
-            position: absolute;
-            left: 30px;
-            bottom: 150px;
-        }
-
-        .creative-shapes {
-            position: absolute;
-            right: 550px;
-            top: 700px;
+        .bar-3 {
+            @include shape-right;
+            height: 47px;
             width: 100px;
-
-            .bar-1 {
-                @include shape-right;
-                height: 44px;
-                width: 130px;
-                background-color: $orange-red;
-                left: 630px;
-                bottom: 270px;
-            }
-
-            .round-1 {
-                border-radius: 50%;
-                background-color: $dark-color;
-                height: 25px;
-                width: 25px;
-                position: relative;
-                left: 600px;
-                top: -240px;
-            }
-
-            .bar-2 {
-                @include shape-right;
-                height: 44px;
-                width: 230px;
-                background-color: $orange-red;
-                left: 550px;
-                bottom: 225px;
-            }
-
-            .bar-3 {
-                @include shape-right;
-                height: 47px;
-                width: 100px;
-                background-color: $dark-blue;
-                left: 650px;
-                bottom: 210px;
-            }
-
-            .round-2 {
-                border-radius: 50%;
-                background-color: $dark-blue;
-                height: 40px;
-                width: 40px;
-                position: relative;
-                left: 600px;
-                bottom: 190px;
-            }
+            background-color: $dark-blue;
+            left: 650px;
+            bottom: 210px;
         }
 
+        .round-2 {
+            border-radius: 50%;
+            background-color: $dark-blue;
+            height: 40px;
+            width: 40px;
+            position: relative;
+            left: 600px;
+            bottom: 190px;
+        }
+    }
+
+
+    .container {
+        position: relative;
 
         .title {
             margin-bottom: 37px;
@@ -138,7 +138,8 @@
                     outline: 2px solid $danger;
                     border-radius: 8px;
                 }
-                .error{
+
+                .error {
                     color: $danger;
                     margin-top: 5px;
                 }
@@ -181,7 +182,7 @@
                         border: solid 1px #d5d5d5;
                         line-height: 1.94;
                         color: $grey-color;
-                        margin-bottom:5px;
+                        margin-bottom: 5px;
                     }
 
                     .select-input {
@@ -260,12 +261,10 @@
 
     @include breakpoints(map-get($breakpoints, "viewport-lg")) {
         & {
+            .creative-shapes {
+                display: none;
+            }
             .container {
-                .creative-shapes {
-                    position: absolute;
-                    top: 650px;
-                    z-index: 1;
-                }
 
                 .message {
                     margin: 10px 0 30px;
@@ -303,31 +302,35 @@
         & {
             margin-bottom: 70px;
 
+            .half-round {
+                display: none;
+            }
+
+            .round {
+                left: 10px;
+                top: 50px;
+            }
+
+            .round-1 {
+                right: 10px;
+                top: 300px;
+            }
+
+            .round-3 {
+                right: 10px;
+            }
+
+            .round-4 {
+                @include round($orange-red);
+                top: 550px;
+                left: 10px;
+            }
+
+            .creative-shapes {
+                display: none;
+            }
+
             .container {
-                .half-round {
-                    display: none;
-                }
-
-                .round {
-                    left: 10px;
-                    top: 50px;
-                }
-
-                .round-1 {
-                    right: 10px;
-                    top: 300px;
-                }
-
-                .round-3 {
-                    right: 10px;
-                }
-
-                .round-4 {
-                    @include round($orange-red);
-                    top: 550px;
-                    left: 10px;
-                }
-
                 .btn-container {
                     justify-content: center;
                     width: 100%;
@@ -339,10 +342,6 @@
                     width: 80%;
                     margin: auto;
                     text-align: center;
-                }
-
-                .creative-shapes {
-                    display: none;
                 }
 
                 .title {

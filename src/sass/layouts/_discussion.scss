@@ -11,7 +11,7 @@
     .half-round{
         @include halfRound(scale(-1),$dark-blue);
         top: 140px;
-        left: -90px;
+        left: 0px;
     }
           
     &-content{

@@ -3,60 +3,62 @@
     position: relative;
     margin-bottom: 200px;
 
-    .container {
-        .creative-shapes-left {
-            position: relative;
-            left: -100px;
-            top: 180px;
-            transform: rotate(-175deg);
 
-            .bar-1 {
-                @include shape;
-                height: 47px;
-                width: 100px;
-                background-color: $dark-blue;
-                left: 990px;
-                top: 130px;
-            }
+    .creative-shapes-left {
+        position: absolute;
+        left: 0px;
+        top: 130px;
+        transform: rotate(-175deg);
 
-            .round-1 {
-                border-radius: 50%;
-                background-color: $dark-color;
-                height: 25px;
-                width: 25px;
-                position: absolute;
-                right: 70px;
-                top: 378px;
-            }
-
-            .bar-2 {
-                @include shape;
-                height: 44px;
-                width: 270px;
-                background-color: $orange-red;
-                right: -80px;
-                top: 255px;
-            }
-
-            .bar-3 {
-                @include shape;
-                height: 44px;
-                width: 130px;
-                background-color: $orange-red;
-                right: -60px;
-                top: 290px;
-            }
-
-            .round-2 {
-                border-radius: 50%;
-                background-color: $dark-blue;
-                height: 40px;
-                width: 40px;
-                position: absolute;
-                right: 70px;
-                top: 195px;
-            }
+        .bar-1 {
+            @include shape;
+            height: 47px;
+            width: 100px;
+            background-color: $dark-blue;
+            left: -50px;
+            top: 110px;
         }
+
+        .round-1 {
+            border-radius: 50%;
+            background-color: $dark-color;
+            height: 25px;
+            width: 25px;
+            position: absolute;
+            right: 70px;
+            top: 378px;
+        }
+
+        .bar-2 {
+            @include shape;
+            height: 44px;
+            width: 270px;
+            background-color: $orange-red;
+            right: -80px;
+            top: 255px;
+        }
+
+        .bar-3 {
+            @include shape;
+            height: 44px;
+            width: 130px;
+            background-color: $orange-red;
+            right: -60px;
+            top: 290px;
+        }
+
+        .round-2 {
+            border-radius: 50%;
+            background-color: $dark-blue;
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            right: 70px;
+            top: 195px;
+        }
+    }
+
+    .container {
 
         .secondary-btn {
             position: absolute;
@@ -65,30 +67,30 @@
             text-align: center;
         }
     }
+
     @include breakpoints(map-get($breakpoints, "viewport-lg")) {
         & {
             margin-bottom: 100px;
         }
     }
+
     @include breakpoints(map-get($breakpoints, "viewport-md")) {
         & {
             margin-bottom: 100px;
-            .container {
-               .creative-shapes-left{
+
+            .creative-shapes-left {
                 display: none;
-               }
             }
         }
     }
+
     @include breakpoints(map-get($breakpoints, "viewport-sm")) {
         & {
             margin-bottom: 100px;
-            .container {
-               .creative-shapes-left{
+
+            .creative-shapes-left {
                 display: none;
-               }
             }
         }
     }
 }
-

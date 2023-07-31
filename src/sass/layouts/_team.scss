@@ -1,6 +1,7 @@
 .team-section {
     position: relative;
-    margin-bottom: 70px;
+    margin-bottom: 160px;
+    // overflow: hidden;
 
     .round-1 {
         @include round($dark-blue);
@@ -18,7 +19,7 @@
     .half-round {
         @include halfRound(scale(1), $orange-red);
         position: absolute;
-        right: -56px;
+        right: 0px;
         top: -140px;
     }
 
